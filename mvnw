@@ -216,8 +216,8 @@ else
     else
       jarUrl="https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.5.6/maven-wrapper-0.5.6.jar"
     fi
-    while IFS="=" read key value; do
-      case "$key" in (wrapperUrl) jarUrl="$value"; break ;;
+    while IFS="=" read key status; do
+      case "$key" in (wrapperUrl) jarUrl="$status"; break ;;
       esac
     done < "$BASE_DIR/.mvn/wrapper/maven-wrapper.properties"
     if [ "$MVNW_VERBOSE" = true ]; then
