@@ -15,7 +15,6 @@ import java.util.concurrent.Callable;
 
 @RestController
 @Api(value="News Api", description="Monitor e-commerance company shipping ")
-
 public class ShippingMonitoringController {
 
     private final ShippingMonitoringService shippingMonitoringService;

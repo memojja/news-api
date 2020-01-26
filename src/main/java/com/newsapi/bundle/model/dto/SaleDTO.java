@@ -1,9 +1,11 @@
 package com.newsapi.bundle.model.dto;
 
 import com.newsapi.bundle.model.request.Sale;
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class SaleDTO {
     private Long id;
     private String code;

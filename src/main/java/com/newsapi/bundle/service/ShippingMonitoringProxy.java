@@ -43,7 +43,7 @@ public class ShippingMonitoringProxy {
         Product product = salesClient.findProductById (sale.getProductId());
         Shipping shipping = salesClient.findShippingBySaleId (saleId);
         return ShippingMonitoringDTO.builder()
-                .sale(new SaleDTO().toDTO(sale))
+                .sale(SaleDTO.builder().build().toDTO(sale))
                 .product(new ProductDTO().toDTO(product))
                 .status(shipping.getStatus() ? DeliverStatus.COMPLETED.value() : DeliverStatus.NOT_COMPLETED.value())
                 .build();
