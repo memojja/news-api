@@ -20,7 +20,7 @@ public class DummyShippingMonitorCache implements ShippingMonitorCache {
 
     @Override
     public Optional<ShippingMonitoringDTO> getShippingMonitoringDTOBySaleId(Long saleId) {
-        return Optional.of(inMemory.get(saleId));
+        return Optional.ofNullable(inMemory.get(saleId));
     }
 
     @Override
